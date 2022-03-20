@@ -55,11 +55,11 @@ $(($) => {
 
     const isVictory = () => {
         if (discovered >= $('.tile').length) {
-            
+            clearInterval(timer)
             setTimeout(() => {
                 $('#score').addClass('victory')
                 winSound.play()
-                clearInterval(timer)
+                
                 return true
             }, 1000)
 
