@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+body {
+  height: 100%;
+  font-family: 'Fredoka One', cursive;
+}
+
+.angular {
+  content: url('../img/angularjs.svg');
+}
+
+.c {
+  content: url('../img/c.svg');
+}
+
+.cplusplus {
+  content: url('../img/c++.svg');
+}
+
+.c-sharp {
+  content: url('../img/c-sharp.svg');
+}
+
+.css {
+  content: url('../img/css3.svg');
+}
+
+.dart {
+  content: url('../img/dart.svg');
+}
+
+.flutter {
+  content: url('../img/flutter.svg');
+}
+
+.html {
+  content: url('../img/html5.svg');
+}
+
+.java {
+  content: url('../img/java.svg');
+}
+
+.js {
+  content: url('../img/js.svg');
+}
+
+.kotlin {
+  content: url('../img/kotlin.svg');
+}
+
+.matlab {
+  content: url('../img/matlab.svg');
+}
+
+.php {
+  content: url('../img/php.svg');
+}
+
+.python {
+  content: url('../img/python.svg');
+}
+
+.react {
+  content: url('../img/react-native.svg');
+}
+
+.ruby {
+  content: url('../img/ruby.svg');
+}
+
+.swift {
+  content: url('../img/swift.svg');
+}
+
+.ts {
+  content: url('../img/typescript.svg');
+}
+
+.angular,
+.c,
+.c-sharp,
+.cplusplus,
+.css,
+.dart,
+.flutter,
+.html,
+.java,
+.js,
+.kotlin,
+.matlab,
+.php,
+.python,
+.react,
+.ruby,
+.swift,
+.ts {
+  width: 10vw;
+}
+
+
+.tile {
+  background-color: transparent;
+  width: 13vw;
+  height: 13vw;
+  perspective: 1000px;
+}
+
+.tile-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  border-radius: 10%;
+  transform-style: preserve-3d;
+}
+
+.flip .tile-content {
+  transform: rotateY(-180deg) scale(110%);
+}
+
+.tile-front, .tile-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.tile-front {
+  color: black;
+}
+
+.tile-back {
+  transform: rotateY(-180deg);
+  transition: transform 0.8s;
+}
+
+header i {
+  font-size: 2em;
+}
+
+.tile i {
+  font-size: 7vw;
+}
+
+img {
+  width: 7vw;
+}
+
+.good, .wrong {
+  animation: animation 1500ms ease 0s 1;
+}
+
+.good .tile-back {
+  background-color: lightgreen;
+}
+
+.wrong .tile-back {
+  background-color: lightcoral;
+}
+
+.victory {
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: win-animation 0.5s ease-in-out 0s;
+  -webkit-animation-fill-mode: forwards;
+-moz-animation-fill-mode: forwards;
+-ms-animation-fill-mode: forwards;
+-o-animation-fill-mode: forwards;
+animation-fill-mode: forwards;
+}
+
+@keyframes win-animation {
+  to {
+    z-index: 10;
+    flex-direction: column;
+    font-size: 2.8em;
+    top: 30%;
+    left: 50%;
+    opacity: 100%;
+    transform: translate(-50%,-50%);
+  }
+
+}
+
+@keyframes animation {
+  0% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+    transform-origin: center center;
+  }
+
+  10% {
+    animation-timing-function: ease-in;
+    transform: scale(0.91);
+  }
+
+  17% {
+    animation-timing-function: ease-out;
+    transform: scale(0.98);
+  }
+
+  33% {
+    animation-timing-function: ease-in;
+    transform: scale(0.87);
+  }
+
+  45% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+  }
+}
+
+@media screen and (min-width:768px) {
+  .tile {
+    width: 10vw;
+    height: 10vw;
+  }
+
+  .angular,
+  .c,
+  .c-sharp,
+  .cplusplus,
+  .css,
+  .dart,
+  .flutter,
+  .html,
+  .java,
+  .js,
+  .kotlin,
+  .matlab,
+  .php,
+  .python,
+  .react,
+  .ruby,
+  .swift,
+  .ts {
+    width: 8vw;
+  }
+}
+
+@media screen and (min-width:1200px) {
+  .tile {
+    width: 6vw;
+    height: 6vw;
+  }
+
+  .angular,
+  .c,
+  .c-sharp,
+  .cplusplus,
+  .css,
+  .dart,
+  .flutter,
+  .html,
+  .java,
+  .js,
+  .kotlin,
+  .matlab,
+  .php,
+  .python,
+  .react,
+  .ruby,
+  .swift,
+  .ts {
+    width: 4vw;
+  }
+}
