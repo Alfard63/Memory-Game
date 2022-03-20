@@ -164,8 +164,17 @@ img {
   width: 7vw;
 }
 
-.good, .wrong {
-  animation: animation 1500ms ease 0s 1;
+.wrong {
+  animation: wrong-animation 1500ms ease 0s 1;
+}
+
+.good {
+  animation: good-animation 1000ms ease 0s 1;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 .good .tile-back {
@@ -182,10 +191,10 @@ img {
   left: 0;
   animation: win-animation 0.5s ease-in-out 0s;
   -webkit-animation-fill-mode: forwards;
--moz-animation-fill-mode: forwards;
--ms-animation-fill-mode: forwards;
--o-animation-fill-mode: forwards;
-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 @keyframes win-animation {
@@ -195,13 +204,18 @@ animation-fill-mode: forwards;
     font-size: 2.8em;
     top: 30%;
     left: 50%;
-    opacity: 100%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
   }
 
 }
 
-@keyframes animation {
+@keyframes good-animation {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes wrong-animation {
   0% {
     animation-timing-function: ease-out;
     transform: scale(1);

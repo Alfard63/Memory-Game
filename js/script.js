@@ -30,8 +30,6 @@ $(($) => {
             discovered += 2
             correctSound.play()
             setTimeout(() => {
-                $(tile1).css('opacity', '0')
-                $(tile2).css('opacity', '0')
                 isVictory()
             }, 1000)
 
